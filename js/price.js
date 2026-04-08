@@ -353,7 +353,7 @@ $("html, body").stop(true, true).animate(
 document.querySelectorAll(".price-card").forEach(card => {
     card.addEventListener("click", () => {
         const type = card.dataset.type;
-        location.href = `/cheolsu/portfolio/index.html?type=${type}`;
+        location.href = `/cheolsu/portfolio/?type=${type}`;
     });
 });
 

@@ -3,7 +3,7 @@ const START_YEAR = 2026;
 const SCHEDULE_DATA = [
     {
         month: 7,
-        collab: { total: 1, booked: 1 },
+        collab: {  status: "upcoming", total: 1, booked: 1 },
         memo:"협업 작업"
     },
 
