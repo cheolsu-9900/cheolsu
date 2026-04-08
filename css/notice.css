@@ -303,7 +303,8 @@
     padding: 20px 16px;
     text-align: center;
     vertical-align: middle;
-    word-break: keep-all;
+   word-break: break-word;  
+    overflow-wrap: anywhere;
     line-height: 1.55;
 }
 
@@ -510,7 +511,7 @@
 
     .t1 {
        width:100%
-        min-width: 100%;
+        min-width: 0;
         table-layout: fixed;
         
     }
