@@ -509,6 +509,7 @@
     }
 
     .t1 {
+       width:100%
         min-width: 100%;
         table-layout: fixed;
         
