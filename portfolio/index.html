@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 / Portfolio</title>
+
+  <script>
+(function () {
+    var lang = localStorage.getItem("lang") || "ko";
+    document.documentElement.setAttribute("data-lang", lang);
+
+    var style = document.createElement("style");
+    style.innerHTML = ".lang-switch{visibility:hidden;} html[data-lang] .lang-switch{visibility:visible;}";
+    document.head.appendChild(style);
+})();
+</script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/cheolsu_icon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/portfolio.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css" type="text/css">
+</head>
+
+<body data-page="portfolio">
+ <header class="site-header">
+        <div class="header_inner">
+            <div class="logo">
+                <a href="/">
+                    <img src="/img/cheolsu.png" alt="CHEOLSU 로고">
+                </a>
+            </div>
+
+            <div class="mobile-title">
+                <a href="/">CHEOLSU</a>
+            </div>
+
+            <nav>
+                <ul class="nav">
+                    <li class="mobile-lang">
+                        <div class="lang-switch">
+                            <button id="ko2" type="button">KO</button>
+                            <button id="en2" type="button">EN</button>
+                        </div>
+                    </li>
+                    <li><a href="/notice/index.html" data-key="notice">공지사항</a></li>
+                    <li><a href="/price/index.html" data-key="price">가격안내</a></li>
+                    <li><a href="/portfolio/index.html" data-key="portfolio">포트폴리오</a></li>
+                    <li><a href="/apply/index.html" data-key="contact">신청폼</a></li>
+                </ul>
+            </nav>
+
+            <div class="lang-switch pc-lang">
+                <button id="ko" type="button">KO</button>
+                <button id="en" type="button">EN</button>
+            </div>
+
+         <button class="menu-btn" type="button" aria-label="메뉴 열기" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+        </div>
+    </header>
+
+    <main class="portfolio-page">
+        <section class="portfolio-hero">
+            <div class="inner">
+                <div class="portfolio-hero-icon">
+                    <img src="/img/portfolio_icon.svg" alt="포트폴리오 아이콘">
+                </div>
+                <h1 class="page-title" data-key="portfolio_title">포트폴리오</h1>
+                <p class="portfolio-hero-text" data-key="portfolio_subtitle">
+                    베이직과 프리미엄 타입의 작업 샘플을 확인해보세요.
+                </p>
+            </div>
+        </section>
+
+        <section class="portfolio-type-section">
+            <div class="inner">
+                <div class="type-tab-wrap">
+                    <button class="type-tab basic active" type="button" data-type="basic">
+                        <span class="type-tab-badge" data-key="basic_badge">BASIC</span>
+                        <strong data-key="basic_tab_title">베이직</strong>
+                        <span data-key="basic_tab_desc">깔끔하고 가벼운 셀식 채색</span>
+                    </button>
+
+                    <button class="type-tab premium" type="button" data-type="premium">
+                        <span class="type-tab-badge" data-key="premium_badge">PREMIUM</span>
+                        <strong data-key="premium_tab_title">프리미엄</strong>
+                        <span data-key="premium_tab_desc">디테일하고 밀도 높은 표현</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-view-section">
+            <div class="inner">
+                <div class="portfolio-type-intro">
+                    <div class="type-heading">
+                        <h2 id="portfolioTypeTitle">베이직 포트폴리오</h2>
+                        <p id="portfolioTypeText">깔끔한 셀식 채색과 가벼운 구성의 작업물입니다.</p>
+                    </div>
+
+                    <ul class="type-feature-list" id="portfolioFeatureList"></ul>
+                </div>
+
+                <!-- <div class="portfolio-main-card">
+                    <button type="button" class="portfolio-main-thumb" id="portfolioMainButton">
+                        <img id="portfolioMainImage" src="./img/b_type_0.png" alt="베이직 대표 작업물">
+                    </button> -->
+
+                    <!-- <div class="portfolio-main-info">
+                        <span class="portfolio-label basic" id="portfolioMainLabel">BASIC</span>
+                        <h3 id="portfolioMainName">Basic Sample 01</h3>
+                        <p id="portfolioMainDesc">대표 작업물을 클릭하면 크게 볼 수 있습니다.</p>
+                    </div>
+                </div> -->
+
+                <div class="portfolio-grid" id="portfolioGrid"></div>
+            </div>
+        </section>
+
+        <section class="apply-cta">
+            <div class="inner">
+                <a href="/apply/index.html" class="apply-cta__btn" data-key="apply_cta_btn">
+                    신청폼으로 이동하기
+                    <span class="arrow">&#8594;</span>
+                </a>
+                <p data-key="apply_cta_text">버튼을 누르면 신청폼으로 이동합니다.</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="portfolio-modal" id="portfolioModal" aria-hidden="true">
+        <div class="portfolio-modal__overlay"></div>
+
+        <div class="portfolio-modal__dialog" role="dialog" aria-modal="true" aria-label="포트폴리오 상세보기">
+            <button type="button" class="portfolio-modal__close" id="modalClose" aria-label="닫기">&times;</button>
+
+          
+
+            <div class="portfolio-modal__content">
+                <div class="portfolio-modal__img-wrap">
+                    <img id="modalImage" src="" alt="">
+                </div>
+
+                <div class="portfolio-modal__info">
+                      <button type="button" class="portfolio-modal__nav prev" id="modalPrev" aria-label="이전 이미지">&#10094;</button>
+            <button type="button" class="portfolio-modal__nav next" id="modalNext" aria-label="다음 이미지">&#10095;</button>
+                    <span class="portfolio-label" id="modalLabel"></span>
+                    <h3 id="modalTitle"></h3>
+                    <p id="modalDesc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerin">
+            <p>© 2026 Cheolsu. All rights reserved.</p>
+        </div>
+    </footer>
+    
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/js/lang.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/portfolio.js"></script>
+</body>
+
+</html>

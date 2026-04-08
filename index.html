@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEOLSU</title>
+
+    <script>
+        (function () {
+            var lang = localStorage.getItem("lang") || "ko";
+            document.documentElement.setAttribute("data-lang", lang);
+
+            var style = document.createElement("style");
+            style.innerHTML = ".lang-switch{visibility:hidden;} html[data-lang] .lang-switch{visibility:visible;}";
+            document.head.appendChild(style);
+        })();
+    </script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/cheolsu_icon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css">
+</head>
+
+<body data-page="index">
+    <header class="site-header">
+        <div class="header_inner">
+            <div class="logo">
+                <a href="/">
+                    <img src="/img/cheolsu.png" alt="CHEOLSU 로고">
+                </a>
+            </div>
+
+            <div class="mobile-title">
+                <a href="/">CHEOLSU</a>
+            </div>
+
+            <nav>
+                <ul class="nav">
+                    <li class="mobile-lang">
+                        <div class="lang-switch">
+                            <button id="ko2" type="button">KO</button>
+                            <button id="en2" type="button">EN</button>
+                        </div>
+                    </li>
+                    <li><a href="/notice/index.html" data-key="notice">공지사항</a></li>
+                    <li><a href="/price/index.html" data-key="price">가격안내</a></li>
+                    <li><a href="/portfolio/index.html" data-key="portfolio">포트폴리오</a></li>
+                    <li><a href="/apply/index.html" data-key="contact">신청폼</a></li>
+                </ul>
+            </nav>
+
+            <div class="lang-switch pc-lang">
+                <button id="ko" type="button">KO</button>
+                <button id="en" type="button">EN</button>
+            </div>
+
+            <button class="menu-btn" type="button" aria-label="메뉴 열기" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="main-inner">
+            <div class="profile-panel">
+                <div class="profile-card-mini">
+                    <div class="profile">
+                        <img src="/img/cheolsu_img2.png" alt="Cheolsu 프로필">
+                    </div>
+
+                    <span class="profile-role eyebrow">FREELANCE ILLUSTRATOR</span>
+                    <h2 class="profile-name">Cheolsu</h2>
+
+
+                    <div class="profile-bubble">
+                        <!-- <span class="profile-bubble-label">NOTICE</span> -->
+                        <p>
+                            26년도 상반기 예약 마감되었습니다! <br>
+                            신규 예약은 6월 1일부터 받을 예정입니다.
+                        </p>
+                    </div>
+
+                    <ul class="profile-contact">
+                        <li>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">csay0108@naver.com</span>
+                        </li>
+                        <li>
+                            <span class="contact-label">X</span>
+                            <span class="contact-value">@CS_AY_</span>
+                        </li>
+                    </ul>
+
+                    <div class="profile-cta">
+                        <a class="profile-primary" href="https://x.com/CS_AY_" target="_blank" rel="noopener noreferrer"
+                            title="X : @CS_AY_" data-page-key="x_button">X 바로가기</a>
+
+                        <a class="profile-secondary" href="/portfolio/index.html" data-page-key="sample_button">작업 샘플
+                            보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-panel">
+                <div class="card hero-card">
+                    <div class="hero-copy">
+                        <span class="eyebrow">SCHEDULE</span>
+                        <h1 class="hero-title" id="scheduleTitle"></h1>
+
+                        <p class="hero-subtitle" data-page-key="schedule_sub">
+                            월별 슬롯 현황을 확인하고 문의해 주세요.
+                        </p>
+
+                        <div class="schedule-legend">
+                            <span class="legend-item">
+                                <i class="legend-dot is-open"></i>
+                                <span data-page-key="legend_open">예약 가능</span>
+                            </span>
+                            <span class="legend-divider">|</span>
+                            <span class="legend-item">
+                                <i class="legend-dot is-closed"></i>
+                                <span data-page-key="legend_closed">예약 마감</span>
+                            </span>
+                            <span class="legend-divider">|</span>
+                            <span class="legend-item">
+                                <i class="legend-dot is-event-closed"></i>
+                                <span data-page-key="legend_event_closed">이벤트 예약 마감</span>
+                            </span>
+                            <span class="legend-divider">|</span>
+                            <span class="legend-item">
+                                <i class="legend-dot is-collab-closed"></i>
+                                <span data-page-key="legend_collab">협업</span>
+                            </span>
+                        </div>
+
+                        <div class="schedule-board" id="scheduleBoard"></div>
+
+                        <p class="schedule-note" data-page-key="schedule_note">
+                            문의 전 공지사항과 가격안내를 먼저 확인해 주세요.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="home-grid">
+                <a class="home-card" href="notice.html">
+                    <span class="card-badge">NOTICE</span>
+                    <h2 data-page-key="home_notice_title">공지사항</h2>
+                    <span class="home-link" data-page-key="home_notice_link">자세히 보기 →</span>
+                </a>
+
+                <a class="home-card" href="price.html">
+                    <span class="card-badge">PRICE</span>
+                    <h2 data-page-key="home_price_title">가격안내</h2>
+                    <span class="home-link" data-page-key="home_price_link">자세히 보기 →</span>
+                </a>
+
+                <a class="home-card" href="portfolio.html">
+                    <span class="card-badge">PORTFOLIO</span>
+                    <h2 data-page-key="home_portfolio_title">포트폴리오</h2>
+                    <span class="home-link" data-page-key="home_portfolio_link">자세히 보기 →</span>
+                </a>
+
+                <a class="home-card" href="contact.html">
+                    <span class="card-badge">APPLY</span>
+                    <h2 data-page-key="home_contact_title">신청폼</h2>
+                    <span class="home-link" data-page-key="home_contact_link">신청하러 가기 →</span>
+                </a>
+            </div> -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footerin">
+            <p>© 2026 Cheolsu. All rights reserved.</p>
+        </div>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/js/lang.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/schedule.data.js"></script>
+    <script src="/js/schedule.render.js"></script>
+</body>
+
+</html>

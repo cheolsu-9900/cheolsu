@@ -1,0 +1,454 @@
+
+
+.contact-head {
+    padding-top: 130px;
+    padding-bottom: 28px;
+}
+
+.contact-head-icon {
+    width: 31px;
+    margin: 0 auto 18px;
+}
+
+.contact-head-icon img {
+    display: block;
+    width: 100%;
+}
+
+.contact-head-text {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 17px;
+    color: var(--text-soft);
+    text-align: center;
+    word-break: keep-all;
+}
+
+.contact-page {
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.contact-card {
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(185, 214, 234, 0.72);
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 30px 28px;
+}
+
+.contact-card--main {
+    position: sticky;
+    top: 120px;
+}
+
+.contact-guide {
+    margin-top: 4px;
+}
+
+.contact-step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-step-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px;
+    border-radius: 22px;
+    background: rgba(248, 252, 255, 0.95);
+    border: 1px solid rgba(219, 231, 241, 0.95);
+}
+
+.step-num {
+    flex: 0 0 auto;
+    min-width: 54px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: #eef8fe;
+    color: var(--sky-deep);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.contact-step-list strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+    color: var(--text);
+}
+
+.contact-step-list p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-soft);
+}
+
+.contact-step-mail {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--sky-deep);
+    word-break: break-all;
+}
+
+.contact-notice {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 22px;
+    background: rgba(255, 250, 245, 0.92);
+    border: 1px solid rgba(255, 210, 180, 0.5);
+}
+
+.notice-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #5a4636;
+    word-break: keep-all;
+}
+
+.notice-text strong {
+    color: #d77a4c;
+}
+
+.payment-flow {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(200, 180, 160, 0.5);
+}
+
+.flow-title {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--sky-deep);
+}
+
+.flow-desc {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+.flow-sub {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #777;
+    line-height: 1.7;
+}
+
+.contact-schedule-section {
+    margin-bottom: 24px;
+}
+
+.contact-card--schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 28px;
+}
+
+.linkedScheduleInfo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.linked-schedule-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 11px 16px;
+    border-radius: 999px;
+    background: #f7fbff;
+    border: 1px solid #dbe7f1;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.linked-schedule-chip strong {
+    font-weight: 700;
+}
+
+.linked-schedule-chip span {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.linked-schedule-chip.available {
+    background: #eef8fe;
+    border-color: #cfe7f6;
+    color: var(--sky-deep);
+}
+
+.linked-schedule-chip.closing {
+    background: #fff7ea;
+    border-color: #f0d7a8;
+    color: #b97a16;
+}
+
+.linked-schedule-chip.upcoming {
+    background: #f4f4f4;
+    border-color: #dddddd;
+    color: #666;
+}
+
+.linked-schedule-chip.closed {
+    background: #f3f5f7;
+    border-color: #d8dee5;
+    color: #8a96a3;
+}
+
+.linked-schedule-empty {
+    font-size: 14px;
+    color: var(--text-soft);
+}
+
+.contact-action-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.contact-btn {
+    flex: 1 1 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    padding: 0 20px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    box-shadow: 0 10px 20px rgba(59, 166, 234, 0.08);
+}
+
+.template-btn {
+    background: var(--sky);
+    color: #fff;
+    border: 1px solid var(--sky);
+}
+
+.template-btn:hover {
+    transform: translateY(-2px);
+    background: var(--sky-deep);
+    border-color: var(--sky-deep);
+    box-shadow: 0 18px 28px rgba(59, 166, 234, 0.22);
+}
+
+.email-btn {
+    background: #fff;
+    color: var(--sky-deep);
+    border: 1.5px solid #b8d8ee;
+}
+
+.email-btn:hover {
+    transform: translateY(-2px);
+    background: #f2f9ff;
+    border-color: #8cc6ea;
+    box-shadow: 0 18px 28px rgba(59, 166, 234, 0.14);
+}
+
+.contact-copy-note {
+    min-height: 30px;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--sky-deep);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.template-box {
+    overflow: hidden;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(247, 251, 255, 0.96) 0%, rgba(255, 255, 255, 0.98) 100%);
+    border: 1px solid rgba(219, 231, 241, 0.95);
+}
+
+.template-box pre {
+    margin: 0;
+    padding: 28px 26px;
+    font-family: "Paperlogy", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.95;
+    color: var(--text);
+    white-space: pre-wrap;
+    word-break: keep-all;
+}
+
+html[data-lang="en"] #templatePreview {
+    display: block;
+}
+
+.slot-diamonds {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 6px;
+}
+
+.slot-diamond {
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    border-radius: 2px;
+    flex: 0 0 auto;
+}
+
+/* 채워진 슬롯 */
+.slot-diamond.filled.regular {
+    background: #5a97d1;
+    border: 1px solid #5a97d1;
+}
+
+.slot-diamond.filled.event {
+    background: #e4b2ba;
+    border: 1px solid #e4b2ba;
+}
+
+.slot-diamond.filled.collab {
+    background: #ffd84d;
+    border: 1px solid #ffd84d;
+}
+
+/* 빈 슬롯 */
+.slot-diamond.empty {
+    background: #fff;
+    border-width: 1.5px;
+    border-style: solid;
+}
+
+.slot-diamond.empty.regular {
+    border-color: #2f6fa8;
+}
+
+.slot-diamond.empty.event {
+    border-color: #c27c87;
+}
+
+.slot-diamond.empty.collab {
+    border-color: #caa100;
+}
+
+/* 오픈 예정 / 마감은 다이아 안 보이도록 contact.js에서 처리하지만, 혹시 남아있으면 회색 */
+.linked-schedule-chip.upcoming .slot-diamond,
+.linked-schedule-chip.closed .slot-diamond {
+    background: #e0e0e0 !important;
+    border-color: #bdbdbd !important;
+    opacity: 0.6;
+}
+
+@media (max-width: 1200px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card--main {
+        position: static;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact-card,
+    .contact-card--schedule {
+        padding: 26px 22px;
+        border-radius: 26px;
+    }
+
+    .contact-head-text {
+        font-size: 16px;
+    }
+
+    .template-box pre {
+        padding: 24px 20px;
+        font-size: 14px;
+        line-height: 1.85;
+    }
+
+    .contact-btn {
+        min-height: 58px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-card,
+    .contact-card--schedule {
+        padding: 22px 18px;
+        border-radius: 22px;
+    }
+
+    .contact-step-list li {
+        padding: 16px 14px;
+        border-radius: 18px;
+    }
+
+    .step-num {
+        min-width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        font-size: 12px;
+    }
+
+    .contact-step-list strong {
+        font-size: 16px;
+    }
+
+    .contact-step-list p,
+    .template-box pre,
+    .notice-text,
+    .flow-desc,
+    .contact-step-mail {
+        font-size: 14px;
+    }
+
+    .contact-action-group {
+        gap: 10px;
+    }
+
+    .contact-btn {
+        min-height: 56px;
+        padding: 0 14px;
+        font-size: 14px;
+    }
+
+    .contact-copy-note {
+        font-size: 15px;
+    }
+
+    .slot-diamonds {
+        gap: 6px;
+        margin-left: 4px;
+    }
+
+    .slot-diamond {
+        width: 9px;
+        height: 9px;
+    }
+}
