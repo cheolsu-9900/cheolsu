@@ -280,7 +280,6 @@
 
 .t1 {
     width: 100%;
-    min-width: 760px;
     table-layout: fixed;
     border-collapse: separate;
     border-spacing: 0;
@@ -303,8 +302,7 @@
     padding: 20px 16px;
     text-align: center;
     vertical-align: middle;
-   word-break: break-word;  
-    overflow-wrap: anywhere;
+    word-break: keep-all;
     line-height: 1.55;
 }
 
@@ -479,8 +477,6 @@
         margin-bottom: 28px;
     }
 
-
-
     .notice-table {
         max-width: 100%;
     }
@@ -505,34 +501,33 @@
     }
 
     .table-wrap {
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
         border-radius: 22px;
     }
 
     .t1 {
-       width:100%
+        width: 100%;
         min-width: 0;
-        table-layout: fixed;
-        
+        table-layout: auto;
     }
-
 
     .t1 th,
     .t1 td {
-        padding: 12px 6px;
-        font-size: 14px;
-        line-height: 1.4;
+        padding: 10px 4px;
+        font-size: 12px;
+        line-height: 1.35;
         letter-spacing: -0.2px;
-        word-break: keep-all;
-
-        
+        word-break: normal;
+        overflow-wrap: anywhere;
+        white-space: normal;
     }
 
-    html[data-lang="en"] .t1 th,
-html[data-lang="en"] .t1 td {
-    word-break: break-word;
-    overflow-wrap: anywhere;
-}
+    .t1 thead th,
+    .t1 tbody th,
+    .t1 tbody td {
+        font-size: 12px;
+    }
 
     .t1 thead th:first-child {
         border-top-left-radius: 22px;
