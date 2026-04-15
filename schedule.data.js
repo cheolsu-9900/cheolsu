@@ -13,7 +13,7 @@ const SCHEDULE_DATA = [
 
     {
         month: 9,
-              regular:  { status: "upcoming", total: 2 },
+         regular:  { status: "upcoming", total: 2 },
     },
 
     {
@@ -23,7 +23,7 @@ const SCHEDULE_DATA = [
 
     {
         month: 11,
-     regular:  { status: "upcoming", total: 2 },
+        regular:  { status: "upcoming", total: 2 },
     },
 
     {
