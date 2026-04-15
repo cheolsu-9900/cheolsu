@@ -187,46 +187,42 @@ function escapeHtml(value) {
         .replaceAll("'", "&#039;");
 }
 
+/* ✅ 수정된 핵심 1: upcoming도 다이아 표시 */
 function renderDiamondSlots(sectionState, type) {
-    if (sectionState.className === "is-upcoming") {
-        return "";
-    }
-
     const total = Math.max(Number(sectionState.total || 0), 0);
     const booked = Math.max(Number(sectionState.booked || 0), 0);
 
     return `
         <div class="slot-diamonds" aria-label="${type} slots">
             ${Array.from({ length: total }).map((_, index) => {
-                const isBooked = index < booked;
-                const stateClass = isBooked ? "filled" : "empty";
+                let stateClass = "empty";
+
+                if (sectionState.className !== "is-upcoming") {
+                    stateClass = index < booked ? "filled" : "empty";
+                }
+
                 return `<span class="slot-diamond ${stateClass} ${type}" aria-hidden="true"></span>`;
             }).join("")}
         </div>
     `;
 }
 
+/* ✅ 수정된 핵심 2: 항상 슬롯 영역 표시 */
 function renderSection(sectionState) {
-    const hasSlots = sectionState.className !== "is-upcoming";
-
     return `
         <div class="schedule-item ${sectionState.type}">
             <div class="schedule-item-head">
                 <span class="schedule-item-label ${sectionState.type}">
                     ${getSectionLabel(sectionState.type)}
                 </span>
-               <span class="schedule-item-value ${sectionState.className}">
-    ${sectionState.type === "collab" ? "" : escapeHtml(sectionState.summary)}
-</span>
+                <span class="schedule-item-value ${sectionState.className}">
+                    ${sectionState.type === "collab" ? "" : escapeHtml(sectionState.summary)}
+                </span>
             </div>
 
-            ${hasSlots ? `
-                <div class="schedule-line-slots">
-                    ${renderDiamondSlots(sectionState, sectionState.type)}
-                </div>
-            ` : ""}
-
-
+            <div class="schedule-line-slots">
+                ${renderDiamondSlots(sectionState, sectionState.type)}
+            </div>
         </div>
     `;
 }
