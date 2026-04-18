@@ -16,7 +16,7 @@ $(document).ready(function () {
             {
                 src: "/cheolsu/img/portfolio/p_type1.png",
                     titleKo: "판매 모델",
-    titleEn: "sales model",
+    titleEn: "Sales Model",
     descKo: "",
     descEn: "",
     modalDescKo: "프리미엄 일러스트 + 풀옵션 리깅 + \nSD 일러스트 (리깅완료) + 삼면도 포함\n표정 5종 (홍조,하트눈,반짝눈,눈물,정색)+ \nIOS 기능 (볼빵빵&메롱) + \n 게임기&손 추가 파츠(실시간 트래킹 연동) + \n선글라스 & 겉옷 ON/OFF 포함\n\n250만원\n\n일러스트: 철수\n리깅: 바다님 (작업중) ",
