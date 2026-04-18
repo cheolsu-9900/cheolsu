@@ -5,16 +5,12 @@ $(document).ready(function () {
                 src: "/cheolsu/img/portfolio/b_type1.png",
                 titleKo: "치지직 / 하나린 미르님",
                 titleEn: "CHZZK / Hanalin Mir",
-                // descKo: "치지직 / 하나린 미르님의 베이직 타입 작업샘플입니다 ",
-                // descEn: "A basic type sample featuring clean cel-style coloring and a light overall composition."
-            },
+                   },
             {
                 src: "/cheolsu/img/portfolio/b_type2.png",
                 titleKo: "치지직 / 도이루님",
                 titleEn: "CHZZK / Doiru",
-                // descKo: "빠른 파츠 분리 작업에 적합한 베이직 타입 샘플입니다.",
-                // descEn: "A basic type sample suitable for efficient parts separation work."
-            }
+                   }
         ],
         premium: [
             {
@@ -32,15 +28,16 @@ $(document).ready(function () {
                 src: "/cheolsu/img/portfolio/p_type2.png",
                 titleKo: "치지직 / 미나토 히토리님",
                 titleEn: "CHZZK / Minato Hitori",
-                // descKo: "풍부한 파츠 구성과 높은 완성도를 보여주는 프리미엄 샘플입니다.",
-                // descEn: "A premium sample that showcases rich part composition and a polished finish."
             },
             {
                 src: "/cheolsu/img/portfolio/p_type3.png",
                 titleKo: "트위치 / 토라치 키요님 ",
                 titleEn: "Twitch / Torachi Kiyo",
-                // descKo: "고가동과 섬세한 표현을 중점으로 한 프리미엄 작업물입니다.",
-                // descEn: "A premium work focused on high mobility and delicate detail."
+            },
+                        {
+                src: "/cheolsu/img/portfolio/p_type4.png",
+                titleKo: "트윗캐스팅 / 하즈키님",
+                titleEn: "TwitCasting / Hazuki",
             }
         ]
     };
