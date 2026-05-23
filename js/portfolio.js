@@ -10,6 +10,16 @@ $(document).ready(function () {
                 src: "/cheolsu/img/portfolio/b_type2.png",
                 titleKo: "치지직 / 도이루님",
                 titleEn: "CHZZK / Doiru",
+                   },    
+            {
+                src: "/cheolsu/img/portfolio/b_type3.png",
+                titleKo: "치지직 / 솜레아님",
+                titleEn: "CHZZK / Somlea",
+                   },
+            {
+                src: "/cheolsu/img/portfolio/b_type4.png",
+                titleKo: "치지직 / 민겐님",
+                titleEn: "CHZZK / Mingen",
                    }
         ],
         premium: [
