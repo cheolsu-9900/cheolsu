@@ -3,31 +3,31 @@ const START_YEAR = 2026;
 const SCHEDULE_DATA = [
     {
         month: 7,
-        regular:  { status: "upcoming", total: 2,  booked: 1 },
+        regular:  { status: "closed", total: 2,  booked: 2 },
     },
 
     {
         month: 8,
-        regular:  { status: "upcoming", total: 2,  booked: 1 },
+        regular:  { status: "closed", total: 2,  booked: 2 },
     },
 
     {
         month: 9,
-         regular:  { status: "upcoming", total: 2 },
+         regular:  { status: "closed", total: 2, booked: 2 },
     },
 
     {
         month: 10,
-       regular:  { status: "upcoming", total: 2 },
+       regular:  { status: "closed", total: 2, booked: 2 },
     },
 
     {
         month: 11,
-        regular:  { status: "upcoming", total: 2 },
+        regular:  { status: "closed", total: 2, booked: 2 },
     },
 
     {
         month: 12,
-          regular:  { status: "upcoming", total: 2 },
+          regular:  { status: "closed", total: 2, booked: 2 },
     },
 ];
