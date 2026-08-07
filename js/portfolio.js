@@ -44,11 +44,20 @@ $(document).ready(function () {
                 titleKo: "트위치 / 토라치 키요님 ",
                 titleEn: "Twitch / Torachi Kiyo",
             },
-                        {
+            {
                 src: "/cheolsu/img/portfolio/p_type4.png",
                 titleKo: "트윗캐스팅 / 하즈키님",
                 titleEn: "TwitCasting / Hazuki",
-            }
+            },
+            {
+                src: "/cheolsu/img/portfolio/p_type5.png",
+                titleKo: "보로테테님",
+                titleEn: "BOROtete",
+            },
+            {
+                src: "/cheolsu/img/portfolio/p_type6.png",
+                titleKo: "유튜브 / 시엔님",
+                titleEn: "YouTube / Sien",
         ]
     };
 
