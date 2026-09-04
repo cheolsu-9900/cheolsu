@@ -57,6 +57,11 @@ $(document).ready(function () {
                 src: "/cheolsu/img/portfolio/p_type6.png",
                 titleKo: "유튜브 / 시엔님",
                 titleEn: "YouTube / Sien",
+              },
+             {
+                src: "/cheolsu/img/portfolio/p_type7.png",
+                titleKo: "유튜브 / 파루오님",
+                titleEn: "YouTube / Paruo",
               }
         ]
     };
