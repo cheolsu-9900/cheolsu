@@ -62,6 +62,16 @@ $(document).ready(function () {
                 src: "/cheolsu/img/portfolio/p_type7.png",
                 titleKo: "유튜브 / 파루오님",
                 titleEn: "YouTube / Paruo",
+               },
+             {
+                src: "/cheolsu/img/portfolio/p_type8.png",
+                titleKo: "치지직 / 리케이님",
+                titleEn: "CHZZK / Lykei",
+               },
+             {
+                src: "/cheolsu/img/portfolio/p_type9.png",
+                titleKo: "비공개",
+                titleEn: "Private",
               }
         ]
     };
